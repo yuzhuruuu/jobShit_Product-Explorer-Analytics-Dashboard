@@ -269,3 +269,519 @@ const allComments = nestedProducts.flatMap(product =>
 
 console.log("\n=== BAGIAN 4.2 ===");
 console.log(allComments);
+
+// BAGIAN 5 — MAP, FILTER, REDUCE
+
+const productsDay2 = [
+    {
+        id: 1,
+        title: "Laptop",
+        price: 1200,
+        category: "laptops",
+        stock: 10,
+        rating: 4.5
+    },
+    {
+        id: 2,
+        title: "Smartphone",
+        price: 800,
+        category: "phones",
+        stock: 15,
+        rating: 4.2
+    },
+    {
+        id: 3,
+        title: "Gaming Laptop",
+        price: 1500,
+        category: "laptops",
+        stock: 5,
+        rating: 4.8
+    },
+    {
+        id: 4,
+        title: "Headphones",
+        price: 100,
+        category: "audio",
+        stock: 20,
+        rating: 4.0
+    }
+];
+
+
+// 5.1 MAP
+// Mengambil semua nama produk
+
+const productTitles = productsDay2.map(
+    product => product.title
+);
+
+console.log("\n=== BAGIAN 5.1 — MAP ===");
+console.log("Daftar produk:");
+console.log(productTitles);
+
+
+// 5.2 FILTER
+// Mengambil produk dengan harga lebih dari 500
+
+const expensiveProducts = productsDay2.filter(
+    product => product.price > 500
+);
+
+console.log("\n=== BAGIAN 5.2 — FILTER ===");
+console.log("Produk dengan harga > 500:");
+console.log(expensiveProducts);
+
+
+// 5.3 REDUCE
+// Menghitung total seluruh stock
+
+const totalStock = productsDay2.reduce(
+    (sum, product) => sum + product.stock,
+    0
+);
+
+console.log("\n=== BAGIAN 5.3 — REDUCE ===");
+console.log("Total stock:", totalStock);
+
+
+// 5.4 FILTER + MAP + REDUCE
+// Menghitung rata-rata harga laptop
+
+const laptopPrices = productsDay2
+    .filter(product => product.category === "laptops")
+    .map(product => product.price);
+
+const totalLaptopPrice = laptopPrices.reduce(
+    (sum, price) => sum + price,
+    0
+);
+
+const averageLaptopPrice =
+    totalLaptopPrice / laptopPrices.length;
+
+console.log("\n=== BAGIAN 5.4 — KOMBINASI ===");
+console.log("Harga laptop:", laptopPrices);
+console.log("Total harga laptop:", totalLaptopPrice);
+console.log("Rata-rata harga laptop:", averageLaptopPrice);
+
+
+// 5.5 STATISTICS
+// Membuat fungsi untuk menghitung statistik produk
+
+function getStatistics(products) {
+
+    const totalProducts = products.length;
+
+    const averagePrice =
+        products.reduce(
+            (sum, product) => sum + product.price,
+            0
+        ) / products.length;
+
+    const highestPrice = Math.max(
+        ...products.map(product => product.price)
+    );
+
+    const lowestPrice = Math.min(
+        ...products.map(product => product.price)
+    );
+
+    const totalStock = products.reduce(
+        (sum, product) => sum + product.stock,
+        0
+    );
+
+    const averageRating =
+        products.reduce(
+            (sum, product) => sum + product.rating,
+            0
+        ) / products.length;
+
+    return {
+        totalProducts: totalProducts,
+        averagePrice: averagePrice,
+        highestPrice: highestPrice,
+        lowestPrice: lowestPrice,
+        totalStock: totalStock,
+        averageRating: averageRating
+    };
+}
+
+console.log("\n=== BAGIAN 5.5 — STATISTICS ===");
+console.log(getStatistics(productsDay2));
+
+
+// BAGIAN 6 — LINEAR SEARCH
+
+
+// 6.1 Linear Search pada array angka
+
+function linearSearch(array, target) {
+
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] === target) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+
+const numbers = [10, 20, 30, 40, 50];
+
+console.log("\n=== BAGIAN 6.1 — LINEAR SEARCH ===");
+
+console.log(
+    "Index angka 30:",
+    linearSearch(numbers, 30)
+);
+
+console.log(
+    "Index angka 50:",
+    linearSearch(numbers, 50)
+);
+
+console.log(
+    "Index angka 99:",
+    linearSearch(numbers, 99)
+);
+
+
+// 6.2 Linear Search pada data produk
+
+function searchProductById(products, targetId) {
+
+    for (let i = 0; i < products.length; i++) {
+
+        if (products[i].id === targetId) {
+            return products[i];
+        }
+    }
+
+    return -1;
+}
+
+console.log("\n=== BAGIAN 6.2 — SEARCH PRODUCT ===");
+
+console.log(
+    "Produk dengan ID 2:",
+    searchProductById(productsDay2, 2)
+);
+
+console.log(
+    "Produk dengan ID 99:",
+    searchProductById(productsDay2, 99)
+);
+
+
+// BAGIAN 7 — BINARY SEARCH
+
+
+// 7.1 Binary Search pada array angka
+
+function binarySearch(array, target) {
+
+    let left = 0;
+    let right = array.length - 1;
+
+    while (left <= right) {
+
+        const mid = Math.floor(
+            (left + right) / 2
+        );
+
+        if (array[mid] === target) {
+            return mid;
+        }
+
+        if (array[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+
+const sortedNumbers = [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70
+];
+
+console.log("\n=== BAGIAN 7.1 — BINARY SEARCH ===");
+
+console.log(
+    "Index angka 40:",
+    binarySearch(sortedNumbers, 40)
+);
+
+console.log(
+    "Index angka 60:",
+    binarySearch(sortedNumbers, 60)
+);
+
+console.log(
+    "Index angka 99:",
+    binarySearch(sortedNumbers, 99)
+);
+
+
+// 7.2 Binary Search berdasarkan harga produk
+
+const productsSortedByPrice = [
+    {
+        id: 1,
+        title: "Laptop",
+        price: 500
+    },
+    {
+        id: 2,
+        title: "Smartphone",
+        price: 800
+    },
+    {
+        id: 3,
+        title: "Gaming Laptop",
+        price: 1200
+    },
+    {
+        id: 4,
+        title: "Monitor",
+        price: 1500
+    }
+];
+
+
+function binarySearchByPrice(products, targetPrice) {
+
+    let left = 0;
+    let right = products.length - 1;
+
+    while (left <= right) {
+
+        const mid = Math.floor(
+            (left + right) / 2
+        );
+
+        if (products[mid].price === targetPrice) {
+            return products[mid];
+        }
+
+        if (products[mid].price < targetPrice) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+
+console.log("\n=== BAGIAN 7.2 — BINARY SEARCH PRODUCT ===");
+
+console.log(
+    "Produk dengan harga 1200:",
+    binarySearchByPrice(
+        productsSortedByPrice,
+        1200
+    )
+);
+
+console.log(
+    "Produk dengan harga 999:",
+    binarySearchByPrice(
+        productsSortedByPrice,
+        999
+    )
+);
+
+
+// BAGIAN 8 — SORTING
+
+
+// 8.1 Sorting angka menggunakan .sort()
+
+const numbersToSort = [
+    5,
+    3,
+    8,
+    1
+];
+
+const ascendingNumbers = [
+    ...numbersToSort
+].sort((a, b) => a - b);
+
+const descendingNumbers = [
+    ...numbersToSort
+].sort((a, b) => b - a);
+
+
+console.log("\n=== BAGIAN 8.1 — SORTING ANGKA ===");
+
+console.log(
+    "Data asli:",
+    numbersToSort
+);
+
+console.log(
+    "Ascending:",
+    ascendingNumbers
+);
+
+console.log(
+    "Descending:",
+    descendingNumbers
+);
+
+
+// 8.2 Sorting produk berdasarkan harga
+
+const productsByPrice = [
+    ...productsDay2
+].sort(
+    (a, b) => a.price - b.price
+);
+
+console.log("\n=== BAGIAN 8.2 — SORT PRODUCT BY PRICE ===");
+
+console.log(productsByPrice);
+
+
+// 8.3 Bubble Sort
+
+function bubbleSort(numbers) {
+
+    // Copy array supaya array asli tidak berubah
+    const arr = [...numbers];
+
+    for (
+        let i = 0;
+        i < arr.length - 1;
+        i++
+    ) {
+
+        for (
+            let j = 0;
+            j < arr.length - 1 - i;
+            j++
+        ) {
+
+            if (arr[j] > arr[j + 1]) {
+
+                [
+                    arr[j],
+                    arr[j + 1]
+                ] = [
+                    arr[j + 1],
+                    arr[j]
+                ];
+            }
+        }
+    }
+
+    return arr;
+}
+
+
+console.log("\n=== BAGIAN 8.3 — BUBBLE SORT ===");
+
+console.log(
+    "Hasil Bubble Sort:",
+    bubbleSort([5, 3, 8, 1])
+);
+
+
+// 8.4 Sorting produk berdasarkan beberapa kriteria
+
+function sortProducts(products, sortBy) {
+
+    // Copy array supaya data asli tidak berubah
+    const result = [...products];
+
+
+    // Harga: kecil → besar
+    if (sortBy === "price-asc") {
+
+        return result.sort(
+            (a, b) => a.price - b.price
+        );
+    }
+
+
+    // Harga: besar → kecil
+    if (sortBy === "price-desc") {
+
+        return result.sort(
+            (a, b) => b.price - a.price
+        );
+    }
+
+
+    // Rating: tinggi → rendah
+    if (sortBy === "rating") {
+
+        return result.sort(
+            (a, b) => b.rating - a.rating
+        );
+    }
+
+
+    // Judul: A → Z
+    if (sortBy === "title") {
+
+        return result.sort(
+            (a, b) =>
+                a.title.localeCompare(b.title)
+        );
+    }
+
+
+    // Jika sortBy tidak dikenali
+    return result;
+}
+
+
+console.log("\n=== BAGIAN 8.4 — SORT PRODUCTS ===");
+
+console.log(
+    "Harga termurah:",
+    sortProducts(
+        productsDay2,
+        "price-asc"
+    )
+);
+
+console.log(
+    "Harga termahal:",
+    sortProducts(
+        productsDay2,
+        "price-desc"
+    )
+);
+
+console.log(
+    "Rating tertinggi:",
+    sortProducts(
+        productsDay2,
+        "rating"
+    )
+);
+
+console.log(
+    "Judul A-Z:",
+    sortProducts(
+        productsDay2,
+        "title"
+    )
+);
