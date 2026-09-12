@@ -14,7 +14,7 @@ Proyek ini merupakan implementasi dari jobsheet "Advanced JavaScript & Data Stru
 - **Optimasi Data:** Penggunaan struktur data **Map** untuk *lookup* data dengan performa O(1) dan **Set** untuk mengekstrak kategori atau *tag* unik secara efisien.
 - **State Management:** Pengelolaan siklus hidup aplikasi (*idle, loading, success, error, empty*) secara terpusat murni menggunakan objek JavaScript.
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 - **HTML5 & CSS3:** Struktur dan presentasi antarmuka (cocok disesuaikan dengan *dark-mode* agar visual aplikasi lebih elegan).
 - **Vanilla JavaScript (ES6+):** Logika inti, manipulasi DOM dinamis, dan *Event Handling*.
 - **ES Modules:** Arsitektur modular *separation of concerns* (`api.js`, `algorithms.js`, `state.js`, `ui.js`, `main.js`).
