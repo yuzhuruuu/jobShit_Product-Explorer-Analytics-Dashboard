@@ -1,6 +1,6 @@
 # Product Explorer & Analytics Dashboard 
 
-Sebuah aplikasi web interaktif yang dibangun menggunakan **Vanilla JavaScript (ES6+)** murni tanpa framework tambahan. Proyek ini merupakan studi kasus komprehensif untuk implementasi struktur data lanjutan (Set, Map, Stack) dan algoritma (Searching, Sorting) dalam ekosistem pengembangan web modern.
+Sebuah aplikasi web interaktif yang dibangun menggunakan **Vanilla JavaScript (ES6+)** murni tanpa framework tambahan. Proyek ini merupakan studi kasus komprehensif untuk implementasi struktur data lanjutan (Set, Map, Stack) dan algoritma (Searching, Sorting) dalam ekosistem pengembangan web modern.  
 
 ## Deskripsi Proyek
 
