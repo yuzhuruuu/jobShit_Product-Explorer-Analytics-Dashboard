@@ -1,6 +1,6 @@
 // main.js — menghubungkan semua modul: fetch data, event handling, render.
 
-import { fetchProducts } from "./api.js";
+import { fetchProducts } from "./Api.js";
 import {
   applyFilters,
   getStatistics,
@@ -12,9 +12,9 @@ import {
   renderStatistics,
   renderResultCount,
   populateCategoryOptions,
-} from "./ui.js";
+} from "./Ui.js";
 import { state, searchHistory } from "./state.js";
-import { debounce } from "./utils.js";
+import { debounce } from "./Utils.js";
 
 let productLookup = new Map(); // dibangun ulang setiap kali data produk berubah
 

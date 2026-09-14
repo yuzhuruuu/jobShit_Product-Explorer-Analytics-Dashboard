@@ -1,7 +1,7 @@
 // ui.js — semua kode yang menyentuh DOM dikumpulkan di sini.
 // Modul lain (algorithms, api, state) tidak boleh tahu soal DOM.
 
-import { formatCurrency, capitalize } from "./utils.js";
+import { formatCurrency, capitalize } from "./Utils.js";
 
 const productList = document.querySelector("#product-list");
 const statusArea = document.querySelector("#status-area");
