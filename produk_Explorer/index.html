@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Product Explorer</h1>
+      <p class="subtitle">Data produk dari DummyJSON API</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="filters">
+      <div class="filter-row">
+        <input type="text" id="search-input" placeholder="Cari produk berdasarkan judul...">
+        <select id="category-select">
+          <option value="all">Semua Kategori</option>
+        </select>
+        <select id="sort-select">
+          <option value="default">Urutkan</option>
+          <option value="price-asc">Harga: Rendah ke Tinggi</option>
+          <option value="price-desc">Harga: Tinggi ke Rendah</option>
+          <option value="rating">Rating Tertinggi</option>
+          <option value="title">Judul (A-Z)</option>
+        </select>
+      </div>
+      <div class="filter-row">
+        <input type="number" id="min-price" placeholder="Harga min">
+        <input type="number" id="max-price" placeholder="Harga max">
+        <input type="number" id="min-rating" placeholder="Rating min" min="0" max="5" step="0.1">
+        <button id="reset-filters" type="button">Reset Filter</button>
+      </div>
+    </section>
+
+    <section id="stats-area" class="stats-area"></section>
+
+    <p id="result-count" class="result-count"></p>
+
+    <p id="status-area" class="status-area" hidden></p>
+
+    <section id="product-list" class="product-list"></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Jobsheet Praktikum — Pemrograman Web Fullstack</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagian 18 - State Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Product Explorer</h1>
+
+    <p id="status">Loading...</p>
+
+    <div id="product-list"></div>
+
+    <script src="main.js"></script>
+</body>
+<input
+    id="search-input"
+    type="text"
+    placeholder="Search product..."
+>
+
+<select id="category-select">
+    <option value="all">All categories</option>
+    <option value="laptops">Laptops</option>
+    <option value="phones">Phones</option>
+    <option value="audio">Audio</option>
+</select>
+
+<select id="sort-select">
+    <option value="default">Default</option>
+    <option value="price-asc">Price Low → High</option>
+    <option value="price-desc">Price High → Low</option>
+</select>
+</html>
