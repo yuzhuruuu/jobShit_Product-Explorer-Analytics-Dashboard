@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background: #f5f5f5;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    padding: 10px;
+}
+
+#statistics {
+    margin-bottom: 20px;
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
