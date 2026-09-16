@@ -1,6 +1,4 @@
-// Day 04 - Bagian 16
 // Algorithm Complexity / Big-O
-
 
 // 16.1 Linear Search dengan penghitung langkah
 

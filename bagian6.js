@@ -1,11 +1,6 @@
-// ========================================
 // BAGIAN 6 - LINEAR SEARCH
-// ========================================
 
-
-// ========================================
 // 6.1 LINEAR SEARCH
-// ========================================
 
 function linearSearch(array, target) {
 
@@ -21,9 +16,7 @@ function linearSearch(array, target) {
 }
 
 
-// ========================================
 // TEST LINEAR SEARCH
-// ========================================
 
 const numbers = [10, 20, 30, 40, 50];
 
@@ -33,10 +26,7 @@ console.log("Index 30:", linearSearch(numbers, 30));
 console.log("Index 50:", linearSearch(numbers, 50));
 console.log("Index 99:", linearSearch(numbers, 99));
 
-
-// ========================================
 // 6.2 SEARCH PRODUCT BY ID
-// ========================================
 
 const products = [
     {

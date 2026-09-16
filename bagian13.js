@@ -1,6 +1,4 @@
-// Day 03 - Bagian 13
 // Stack (LIFO)
-
 
 // 13.1 Membuat Stack
 
@@ -37,9 +35,7 @@ class Stack {
     }
 }
 
-
 const stack = new Stack();
-
 
 // 13.2 Menambahkan data
 

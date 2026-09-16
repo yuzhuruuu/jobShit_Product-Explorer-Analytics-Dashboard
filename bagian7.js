@@ -1,11 +1,6 @@
-// ========================================
 // BAGIAN 7 - BINARY SEARCH
-// ========================================
 
-
-// ========================================
 // 7.1 BINARY SEARCH
-// ========================================
 
 function binarySearch(arr, target) {
 
@@ -31,9 +26,7 @@ function binarySearch(arr, target) {
 }
 
 
-// ========================================
 // TEST BINARY SEARCH
-// ========================================
 
 const numbers = [
     10,
@@ -52,9 +45,7 @@ console.log("Index 60:", binarySearch(numbers, 60));
 console.log("Index 99:", binarySearch(numbers, 99));
 
 
-// ========================================
-// 7.2 BINARY SEARCH BY PRODUCT PRICE
-// ========================================
+// 7.2 BINARY SEARCH BY PRODUCT PRICE 
 
 const products = [
     {

@@ -27,12 +27,12 @@ Aplikasi ini mengambil data produk menggunakan REST API dari [DummyJSON](https:/
 
 ```text
 📁 product_Explorer/
-├── 📄 index.html      
-├── 📄 style.css       
-└── 📁 js/             
-    ├── 📄 main.js       
-    ├── 📄 state.js       
-    ├── 📄 api.js        
-    ├── 📄 utils.js       
-    ├── 📄 ui.js         
-    └── 📄 algorithms.js # Algoritma Searching, Sorting, Stack, Map, dan Set
+├── index.html      
+├── style.css       
+└── js/             
+    ├── main.js       
+    ├── state.js       
+    ├── api.js        
+    ├── utils.js       
+    ├── ui.js         
+    └── algorithms.js # Algoritma Searching, Sorting, Stack, Map, dan Set

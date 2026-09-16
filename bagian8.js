@@ -1,6 +1,4 @@
-// ========================================
 // BAGIAN 8 - SORTING
-// ========================================
 
 const products = [
     {
@@ -29,10 +27,7 @@ const products = [
     }
 ];
 
-
-// ========================================
 // 8.1 SORT ANGKA
-// ========================================
 
 const numbers = [5, 3, 8, 1];
 
@@ -44,10 +39,7 @@ console.log("=== SORT NUMBERS ===");
 console.log("Ascending:", ascendingNumbers);
 console.log("Descending:", descendingNumbers);
 
-
-// ========================================
 // 8.2 SORT PRODUCT BY PRICE
-// ========================================
 
 const productsByPrice = [...products].sort(
     (a, b) => a.price - b.price
@@ -56,10 +48,7 @@ const productsByPrice = [...products].sort(
 console.log("\n=== SORT PRODUCT BY PRICE ===");
 console.log(productsByPrice);
 
-
-// ========================================
 // 8.3 BUBBLE SORT
-// ========================================
 
 function bubbleSort(numbers) {
 
@@ -89,9 +78,7 @@ console.log(
 );
 
 
-// ========================================
 // 8.4 SORT PRODUCTS
-// ========================================
 
 function sortProducts(products, sortBy) {
 
@@ -133,9 +120,7 @@ function sortProducts(products, sortBy) {
 }
 
 
-// ========================================
 // TEST SORT PRODUCTS
-// ========================================
 
 console.log("\n=== SORT PRODUCTS ===");
 

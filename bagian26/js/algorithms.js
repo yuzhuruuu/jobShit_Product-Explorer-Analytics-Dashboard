@@ -1,6 +1,5 @@
-// algorithms.js — semua logika DSA dikumpulkan di sini, terpisah dari DOM.
-
-// ---------- Searching ----------
+// algorithms.js — logika DSA dikumpulkan di sini, terpisah dari DOM.
+// Searching 
 
 export function linearSearch(array, target) {
   for (let i = 0; i < array.length; i++) {
@@ -21,10 +20,10 @@ export function binarySearch(sortedArray, target) {
   return -1;
 }
 
-// ---------- Sorting ----------
+// Sorting 
 
 export function sortProducts(products, sortBy) {
-  const list = [...products]; // jangan mutasi array asli
+  const list = [...products]; 
 
   switch (sortBy) {
     case "price-asc":
@@ -40,7 +39,7 @@ export function sortProducts(products, sortBy) {
   }
 }
 
-// ---------- Grouping & Aggregation ----------
+// Grouping & Aggregation 
 
 export function groupByCategory(products) {
   return products.reduce((groups, product) => {
@@ -102,7 +101,7 @@ export function getCategoryAnalytics(products) {
   });
 }
 
-// ---------- Map sebagai struktur data (bukan Array.prototype.map) ----------
+// Map sebagai struktur data (bukan Array.prototype.map) 
 
 export function buildProductLookup(products) {
   const map = new Map();
@@ -112,7 +111,7 @@ export function buildProductLookup(products) {
   return map;
 }
 
-// ---------- Search dengan ranking (Challenge 5) ----------
+// Search dengan ranking (Challenge 5) 
 // Prioritas: 1) exact title match, 2) title mengandung keyword, 3) rating tertinggi
 
 export function searchWithRanking(products, keyword) {
@@ -125,13 +124,13 @@ export function searchWithRanking(products, keyword) {
       let score = 0;
       if (p.title.toLowerCase() === lower) score += 100;
       else score += 50;
-      score += p.rating; // rating jadi tie-breaker
+      score += p.rating; 
       return { ...p, _score: score };
     })
     .sort((a, b) => b._score - a._score);
 }
 
-// ---------- Multi-filter pipeline ----------
+// Multi-filter pipeline 
 // Urutan: search dulu (paling banyak membuang data), baru category, price, rating
 
 export function applyFilters(products, filters) {
@@ -158,7 +157,6 @@ export function applyFilters(products, filters) {
   }
 
   if (filters.sortBy && filters.sortBy !== "default" && !filters.search) {
-    // kalau lagi search, urutan ranking dipertahankan, jangan di-sort ulang
     result = sortProducts(result, filters.sortBy);
   }
 

@@ -98,7 +98,6 @@ function filterByCategory(
 
 }
 
-
 // STATISTICS
 
 function getStatistics(products) {
@@ -163,7 +162,6 @@ document.querySelector("#statistics").innerHTML = `
         ${statistics.averageRating.toFixed(2)}
     </p>
 `;
-
 
 // RENDER PRODUCTS
 

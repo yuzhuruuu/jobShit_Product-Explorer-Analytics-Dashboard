@@ -11,7 +11,6 @@ export function linearSearch(array, target) {
     return null;
 }
 
-
 export function binarySearch(array, target) {
 
     let left = 0;
@@ -37,7 +36,6 @@ export function binarySearch(array, target) {
 
     return null;
 }
-
 
 export function groupByCategory(products) {
 

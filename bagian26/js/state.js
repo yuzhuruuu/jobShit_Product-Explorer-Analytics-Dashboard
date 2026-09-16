@@ -2,15 +2,15 @@
 // UI selalu dirender berdasarkan state ini, bukan dimanipulasi langsung.
 
 export const state = {
-  products: [],        // hasil fetch dari DummyJSON
+  products: [],        
   search: "",
   category: "all",
   sortBy: "default",
   minPrice: "",
   maxPrice: "",
   minRating: "",
-  favorites: new Set(),   // id produk favorit, Set supaya tidak ada duplikasi
-  status: "idle",          // idle | loading | success | error | empty
+  favorites: new Set(),   
+  status: "idle",          
   errorMessage: "",
 };
 

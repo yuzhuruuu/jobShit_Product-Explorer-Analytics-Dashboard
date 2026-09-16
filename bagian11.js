@@ -1,6 +1,4 @@
-// Day 03 - Bagian 11
 // Set
-
 
 const products = [
     {

@@ -1,4 +1,3 @@
-// Day 03 - Bagian 10
 // Frequency Counting
 
 
@@ -88,7 +87,6 @@ console.log(
     countFrequency(categories)
 );
 
-
 // 10.3 Frequency rating
 // Rating dibulatkan terlebih dahulu
 
@@ -111,7 +109,6 @@ console.log(
 console.log(
     countFrequency(ratings)
 );
-
 
 // 10.4 Contoh frequency dengan tags
 

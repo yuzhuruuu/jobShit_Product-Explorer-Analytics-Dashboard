@@ -1,7 +1,4 @@
-// Day 04 - Bagian 14
 // Queue (FIFO)
-
-
 // 14.1 Membuat Queue
 
 class Queue {

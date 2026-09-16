@@ -1,6 +1,4 @@
-// ========================================
 // BAGIAN 5 - MAP, FILTER, REDUCE
-// ========================================
 
 const products = [
     {
@@ -37,33 +35,24 @@ const products = [
     }
 ];
 
-
-// ========================================
 // 5.1 MAP
 // Mengambil title dari setiap produk
-// ========================================
 
 const titles = products.map(product => product.title);
 
 console.log("=== MAP ===");
 console.log(titles);
 
-
-// ========================================
 // 5.2 FILTER
 // Mengambil produk dengan harga > 500
-// ========================================
 
 const expensiveProducts = products.filter(product => product.price > 500);
 
 console.log("\n=== FILTER ===");
 console.log(expensiveProducts);
 
-
-// ========================================
 // 5.3 REDUCE
 // Menghitung total stock
-// ========================================
 
 const totalStock = products.reduce(
     (sum, product) => sum + product.stock,
@@ -73,11 +62,8 @@ const totalStock = products.reduce(
 console.log("\n=== REDUCE ===");
 console.log("Total stock:", totalStock);
 
-
-// ========================================
 // 5.4 FILTER + MAP + REDUCE
 // Rata-rata harga produk kategori laptops
-// ========================================
 
 const laptopPrices = products
     .filter(product => product.category === "laptops")
@@ -92,9 +78,7 @@ console.log("Harga laptop:", laptopPrices);
 console.log("Rata-rata:", averageLaptopPrice);
 
 
-// ========================================
 // 5.5 GET STATISTICS
-// ========================================
 
 function getStatistics(products) {
 

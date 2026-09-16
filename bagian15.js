@@ -1,7 +1,4 @@
-// Day 04 - Bagian 15
 // Recursion
-
-
 // 15.1 Countdown dengan recursion
 
 function countdown(n) {
@@ -24,7 +21,6 @@ function countdown(n) {
 console.log("=== BAGIAN 15.1 ===");
 
 countdown(5);
-
 
 // 15.2 Struktur kategori bertingkat
 
@@ -65,7 +61,6 @@ const categories = [
         ]
     }
 ];
-
 
 // 15.3 Menampilkan kategori secara recursive
 

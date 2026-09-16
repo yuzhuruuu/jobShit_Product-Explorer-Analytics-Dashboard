@@ -16,9 +16,9 @@ import {
 import { state, searchHistory } from "./state.js";
 import { debounce } from "./Utils.js";
 
-let productLookup = new Map(); // dibangun ulang setiap kali data produk berubah
+let productLookup = new Map(); 
 
-// ---------- Core render function ----------
+// Core render function 
 // Dipanggil setiap kali state berubah. Ini satu-satunya pintu ke UI.
 
 function render() {
@@ -46,7 +46,7 @@ function render() {
   renderStatistics(getStatistics(filtered));
 }
 
-// ---------- Data loading ----------
+// Data loading 
 
 async function loadProducts() {
   state.status = "loading";
@@ -70,7 +70,7 @@ async function loadProducts() {
   }
 }
 
-// ---------- Event handlers ----------
+// Event handlers 
 
 function setupEventListeners() {
   const searchInput = document.querySelector("#search-input");
@@ -148,7 +148,7 @@ function setupEventListeners() {
   });
 }
 
-// ---------- Start app ----------
+// Start app 
 
 setupEventListeners();
 loadProducts();

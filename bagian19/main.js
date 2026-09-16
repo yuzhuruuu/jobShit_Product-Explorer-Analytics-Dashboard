@@ -88,7 +88,6 @@ function render() {
     });
 }
 
-
 // SEARCH EVENT
 
 const searchInput = document.querySelector("#search-input");
@@ -101,7 +100,6 @@ searchInput.addEventListener("input", event => {
 
 });
 
-
 // CATEGORY EVENT
 
 const categorySelect = document.querySelector("#category-select");
@@ -113,7 +111,6 @@ categorySelect.addEventListener("change", event => {
     render();
 
 });
-
 
 // SORT EVENT
 

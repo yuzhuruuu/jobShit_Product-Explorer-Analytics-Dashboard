@@ -1,4 +1,3 @@
-// Day 04 - Bagian 17
 // DOM Manipulation
 
 

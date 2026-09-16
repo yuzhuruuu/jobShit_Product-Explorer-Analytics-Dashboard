@@ -15,11 +15,9 @@ import { renderProducts } from "./ui.js";
 
 state.products = products;
 
-
 // Render
 
 renderProducts(state.products);
-
 
 // Testing algorithm
 

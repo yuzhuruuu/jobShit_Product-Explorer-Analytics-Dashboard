@@ -1,4 +1,3 @@
-// Day 03 - Bagian 9
 // Grouping dan Aggregation
 
 
